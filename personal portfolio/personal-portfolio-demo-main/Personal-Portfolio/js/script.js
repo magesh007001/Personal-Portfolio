@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         footer.innerHTML =
             "© " + currentYear +
-            " Vishal D | Personal Portfolio";
+            " Magesh D | Personal Portfolio";
 
 
     }
