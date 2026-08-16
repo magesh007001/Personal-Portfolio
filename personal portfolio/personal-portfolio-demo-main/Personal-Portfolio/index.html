@@ -1,206 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Magesh D | Personal Portfolio</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Personal portfolio website of Magesh D showcasing skills, projects, education, and contact details.">
+          content="Magesh D - Computer Science student portfolio">
 
     <meta name="keywords"
-        content="Portfolio, Magesh D, Web Developer, HTML5, CSS3, JavaScript, Student">
+          content="Magesh D, Computer Science, Java, Web Development, Portfolio">
 
     <meta name="author" content="Magesh D">
 
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Magesh D | Portfolio</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
+<header class="header">
+    <nav class="navbar">
 
-        <h1>Magesh D</h1>
+        <a href="index.html" class="logo">
+            Magesh D<span>.</span>
+        </a>
 
-        <p>Computer Science Engineering Student</p>
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu">
+            ☰
+        </button>
 
-        <!-- Navigation -->
-        <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-            <ul>
+        <button id="themeToggle"
+                class="theme-toggle"
+                aria-label="Toggle dark mode">
+            🌙
+        </button>
 
-                <li><a href="./index.html" aria-current="page">Home</a></li>
+    </nav>
+</header>
 
-                <li><a href="./about.html">About</a></li>
 
-                <li><a href="./projects.html">Projects</a></li>
+<main>
 
-                <li><a href="./contact.html">Contact</a></li>
+    <!-- Hero -->
+    <section id="home" class="hero">
 
-            </ul>
+        <div class="hero-content">
 
-        </nav>
+            <p class="hero-subtitle">Computer Science Student</p>
 
-    </header>
+            <h1>
+                Hi, I'm <span>Magesh D</span>
+            </h1>
 
-    <!-- Main Content -->
-    <main>
-
-        <!-- Hero Section -->
-        <section aria-labelledby="welcome-heading">
-
-            <h2 id="welcome-heading">
-                Welcome to My Portfolio
-            </h2>
-
-            <img src="./img/profile.jpg"
-                alt="Profile photo of Magesh D"
-                width="250">
-
-            <p>
-
-                Hello! I am Magesh D, a Computer Science Engineering student
-                passionate about Web Development, Java Programming,
-                Full Stack Development, Artificial Intelligence,
-                and Software Development.
-
+            <p class="hero-description">
+                I am a Computer Science student interested in
+                Java development, web development and software engineering.
             </p>
 
-            <a href="./projects.html">
-                View My Projects
-            </a>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn">
+                    View Projects
+                </a>
 
-        </section>
+                <a href="#contact" class="btn secondary-btn">
+                    Contact Me
+                </a>
+            </div>
 
-        <!-- Skills -->
-        <section aria-labelledby="skills-heading">
+        </div>
 
-            <h2 id="skills-heading">
-                Technical Skills
-            </h2>
+        <div class="hero-card">
+            <div class="code-card">
+                <p>public class Developer {</p>
+                <p>&nbsp;&nbsp;String name = "Magesh D";</p>
+                <p>&nbsp;&nbsp;String role = "CSE Student";</p>
+                <p>}</p>
+            </div>
+        </div>
 
-            <article>
+    </section>
 
-                <h3>Programming Languages</h3>
 
-                <ul>
+    <!-- About -->
+    <section id="about" class="section">
 
-                    <li>Java</li>
+        <div class="section-heading">
+            <p>About Me</p>
+            <h2>Who I Am</h2>
+        </div>
 
-                    <li>Python</li>
+        <div class="about-grid">
 
-                    <li>JavaScript</li>
-
-                    <li>HTML5</li>
-
-                    <li>CSS3</li>
-
-                    <li>SQL</li>
-
-                </ul>
-
-            </article>
-
-        </section>
-
-        <!-- Education -->
-        <section aria-labelledby="education-heading">
-
-            <h2 id="education-heading">
-
-                Education
-
-            </h2>
-
-            <article>
-
-                <h3>Bachelor of Engineering</h3>
+            <div class="about-text">
+                <h3>Computer Science Student</h3>
 
                 <p>
-
-                    Computer Science and Engineering
-
+                    I am a Computer Science student developing my
+                    skills in programming, web development and
+                    database management.
                 </p>
 
                 <p>
-
-                    Anna University
-
+                    I enjoy building practical applications and
+                    improving my understanding through projects.
                 </p>
+            </div>
+
+            <div class="about-info">
+                <div class="info-box">
+                    <strong>Education</strong>
+                    <span>B.E. Computer Science</span>
+                </div>
+
+                <div class="info-box">
+                    <strong>Focus</strong>
+                    <span>Java Full Stack</span>
+                </div>
+
+                <div class="info-box">
+                    <strong>Location</strong>
+                    <span>Chennai, India</span>
+                </div>
+
+                <div class="info-box">
+                    <strong>Interests</strong>
+                    <span>Software Development</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+
+        <div class="section-heading">
+            <p>Technical Skills</p>
+            <h2>What I Work With</h2>
+        </div>
+
+        <div class="skills-grid">
+
+            <article class="skill-card">
+                <h3>Programming</h3>
+                <p>Java, C, Python</p>
+            </article>
+
+            <article class="skill-card">
+                <h3>Web</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </article>
+
+            <article class="skill-card">
+                <h3>Backend</h3>
+                <p>Spring Boot, REST API</p>
+            </article>
+
+            <article class="skill-card">
+                <h3>Database</h3>
+                <p>MySQL</p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+
+        <div class="section-heading">
+            <p>My Work</p>
+            <h2>Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+
+            <article class="project-card">
+
+                <div class="project-content">
+                    <span class="project-number">01</span>
+
+                    <h3>Pet Shop Management System</h3>
+
+                    <p>
+                        A Java desktop application for managing
+                        pets, customers, inventory, billing and sales.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>MySQL</span>
+                        <span>JDBC</span>
+                    </div>
+                </div>
 
             </article>
 
-        </section>
 
-        <!-- Quick Projects -->
-        <section aria-labelledby="project-heading">
+            <article class="project-card">
 
-            <h2 id="project-heading">
+                <div class="project-content">
+                    <span class="project-number">02</span>
 
-                Featured Projects
+                    <h3>Expense Tracker</h3>
 
-            </h2>
+                    <p>
+                        A responsive web application for recording
+                        income and expenses with balance tracking.
+                    </p>
 
-            <article>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
 
-                <h3>Expense Tracker Website</h3>
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-content">
+                    <span class="project-number">03</span>
+
+                    <h3>Pet Care Management System</h3>
+
+                    <p>
+                        A full-stack application for managing
+                        pet profiles, health records and appointments.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+
+        <div class="section-heading">
+            <p>Get In Touch</p>
+            <h2>Contact Me</h2>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-info">
+
+                <h3>Let's Connect</h3>
 
                 <p>
-
-                    A responsive web application developed using HTML,
-                    CSS, and JavaScript to manage daily income and expenses.
-
+                    Feel free to contact me regarding projects,
+                    internships or opportunities.
                 </p>
 
-            </article>
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    <span>your-email@example.com</span>
+                </div>
 
-            <article>
+                <div class="contact-item">
+                    <strong>Location</strong>
+                    <span>Chennai, India</span>
+                </div>
 
-                <h3>Pet Shop Management System</h3>
+            </div>
 
-                <p>
 
-                    Desktop application developed using Java,
-                    JDBC, and MySQL for managing pet shop operations.
+            <form class="contact-form">
 
-                </p>
+                <label for="name">Name</label>
 
-            </article>
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Your name"
+                       required>
 
-        </section>
 
-    </main>
+                <label for="email">Email</label>
 
-    <!-- Aside -->
-    <aside>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Your email"
+                       required>
 
-        <h2>Career Objective</h2>
 
-        <p>
+                <label for="message">Message</label>
 
-            To build innovative software solutions while continuously
-            improving my technical and professional skills.
+                <textarea id="message"
+                          name="message"
+                          rows="5"
+                          placeholder="Your message"
+                          required></textarea>
 
-        </p>
 
-    </aside>
+                <button type="submit"
+                        class="btn primary-btn">
+                    Send Message
+                </button>
 
-    <!-- Footer -->
-    <footer>
+            </form>
 
-        <p>
+        </div>
 
-            © 2026 Magesh D | Personal Portfolio
+    </section>
 
-        </p>
+</main>
 
-    </footer>
 
-    <script src="/js/script.js"></script>
+<footer class="footer">
+
+    <p>
+        © 2026 Magesh D. All rights reserved.
+    </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
 
 </body>
-
 </html>

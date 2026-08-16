@@ -1,56 +1,74 @@
-document.addEventListener("DOMContentLoaded", function () {
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+const themeToggle = document.getElementById("themeToggle");
 
 
-    // Contact Form Handling
+/* Mobile Navigation */
 
-    const contactForm = document.getElementById("contactForm");
+menuToggle.addEventListener("click", () => {
 
-
-    if (contactForm) {
-
-
-        contactForm.addEventListener("submit", function (event) {
-
-
-            event.preventDefault();
-
-
-            const name = document.getElementById("name").value;
-
-
-            alert(
-                "Thank you " + name + 
-                "! Your message has been submitted successfully."
-            );
-
-
-            contactForm.reset();
-
-
-        });
-
-
-    }
-
-
-
-    // Automatically update footer year
-
-    const footer = document.querySelector("footer p");
-
-
-    if (footer) {
-
-
-        const currentYear = new Date().getFullYear();
-
-
-        footer.innerHTML =
-            "© " + currentYear +
-            " Magesh D | Personal Portfolio";
-
-
-    }
-
+    navLinks.classList.toggle("active");
 
 });
+
+
+/* Close menu after selecting a link */
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+
+/* Dark / Light Theme */
+
+themeToggle.addEventListener("click", () => {
+
+    const currentTheme =
+        document.documentElement.getAttribute("data-theme");
+
+    if (currentTheme === "dark") {
+
+        document.documentElement.removeAttribute("data-theme");
+
+        themeToggle.textContent = "🌙";
+
+        localStorage.setItem("theme", "light");
+
+    } else {
+
+        document.documentElement.setAttribute(
+            "data-theme",
+            "dark"
+        );
+
+        themeToggle.textContent = "☀️";
+
+        localStorage.setItem("theme", "dark");
+
+    }
+
+});
+
+
+/* Remember selected theme */
+
+const savedTheme =
+    localStorage.getItem("theme");
+
+
+if (savedTheme === "dark") {
+
+    document.documentElement.setAttribute(
+        "data-theme",
+        "dark"
+    );
+
+    themeToggle.textContent = "☀️";
+
+}
